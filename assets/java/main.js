@@ -13,6 +13,7 @@ Strumenti
 -const-let
 -if/else
 -console.log
+-.toFixed()
 
 */
 
@@ -35,21 +36,18 @@ let scontatoQuaranta = costoKm-scontoQuaranta;
 
 
 //Applica sconto per minorenni e maggiorenni
-
+const resultElement = document.getElementById("result");
 if (etaUtente >= 18 && etaUtente <= 65)  {
-    console.log(costoKm);
-    const resultElement = document.getElementById("result");
-    resultElement.innerHTML = "Il prezzo del biglietto è " + costoKm
+    console.log(costoKm.toFixed(2));
+    resultElement.innerHTML = "Il prezzo del biglietto è " + costoKm.toFixed(2)
 } else if (etaUtente < 18) {
-    console.log(scontatoVenti);
-    const resultElement = document.getElementById("result");
-    resultElement.innerHTML = "Il prezzo del biglietto è " + scontatoVenti
+    console.log(scontatoVenti.toFixed(2));
+    resultElement.innerHTML = "Il prezzo del biglietto è " + scontatoVenti.toFixed(2)
 } else if (etaUtente > 65) {
-    console.log(scontatoQuaranta);
-    const resultElement = document.getElementById("result");
-    resultElement.innerHTML = "Il prezzo del biglietto è " + scontatoQuaranta
+    console.log(scontatoQuaranta.toFixed(2));
+    resultElement.innerHTML = "Il prezzo del biglietto è " + scontatoQuaranta.toFixed(2)
 }
 
 //Calcola il prezzo del biglietto e stampalo in forma umana (Massimo 2 decimali)
 
-const resultElement = document.getElementById("result");
+
